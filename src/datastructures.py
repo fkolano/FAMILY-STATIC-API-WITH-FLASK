@@ -38,21 +38,31 @@ class FamilyStructure:
 
     def add_member(self, member):
         # fill this method and update the return
+        #is there another way to add_member withou doing this loop/conditional? a shorter syntax maybe that's to the point idk lol?
         if "last_name" not in member:
             member["last_name"] = self.last_name
         if "id" not in member:
             member["id"] = self._generateId()
+            #explain what "append" does here again again please
         self._members.append(member)
         return self._members
 
+
+
+
     def delete_member(self, id):
         result = False
+        #can you show and explain the result of using enumerate?
         for index, member in enumerate(self._members, start=0):
             if id == member["id"]:
                 self._members.pop(index)
                 print(self._members)
                 result = True
         return result
+
+
+
+
 
     def get_member(self, id):
         result = {}

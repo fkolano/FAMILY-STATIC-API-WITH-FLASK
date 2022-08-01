@@ -64,6 +64,8 @@ def handle_get_member(member_id):
     return jsonify(response_body), status
 
 
+# this is the beiginning
+# I understand the method but how did we add member again since we did not use the member_id?
 @app.route('/add_member', methods=['POST'])
 def handle_add_member():
     body = request.json
